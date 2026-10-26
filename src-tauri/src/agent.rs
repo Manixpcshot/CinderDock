@@ -163,6 +163,7 @@ pub async fn start_retry(
     .await
 }
 
+#[allow(clippy::too_many_arguments)]
 async fn spawn_run(
     state: Arc<AppState>,
     app: AppHandle,
@@ -926,7 +927,7 @@ async fn stream_chat(
         buffer.push_str(&String::from_utf8_lossy(&chunk));
         while let Some(position) = buffer.find('\n') {
             let line: String = buffer.drain(..=position).collect();
-            let line = line.trim_end_matches(|c| c == '\n' || c == '\r');
+            let line = line.trim_end_matches(['\n', '\r']);
             match parser.ingest(line) {
                 Ok(update) => {
                     if !update.delta.is_empty() {

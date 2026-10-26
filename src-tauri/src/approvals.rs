@@ -176,3 +176,9 @@ mod tests {
         assert_eq!(receiver.await.unwrap(), ApprovalDecision::Deny);
     }
 }
+
+impl Default for ApprovalManager {
+    fn default() -> Self {
+        Self::new()
+    }
+}

@@ -12,6 +12,7 @@ use std::fs;
 
 use crate::error::{AppError, AppResult};
 
+#[cfg(target_os = "windows")]
 #[derive(Debug, Default, Serialize, Deserialize)]
 struct Envelope {
     version: u32,
@@ -21,6 +22,7 @@ struct Envelope {
 
 #[derive(Debug)]
 struct Inner {
+    #[cfg_attr(not(target_os = "windows"), allow(dead_code))]
     path: PathBuf,
     values: Mutex<HashMap<String, String>>,
 }
@@ -92,6 +94,7 @@ impl SecretStore {
             .unwrap_or_default()
     }
 
+    #[allow(clippy::needless_return)]
     fn persist(&self) -> AppResult<()> {
         #[cfg(not(target_os = "windows"))]
         {
@@ -124,6 +127,7 @@ impl SecretStore {
         }
     }
 
+    #[allow(clippy::needless_return)]
     fn load_from_disk(path: &PathBuf) -> AppResult<HashMap<String, String>> {
         #[cfg(not(target_os = "windows"))]
         {

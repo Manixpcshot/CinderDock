@@ -490,6 +490,24 @@ pub fn empty_headers() -> BTreeMap<String, String> {
     BTreeMap::new()
 }
 
+pub fn mark_streaming_messages_error(
+    conn: &Connection,
+    conversation_id: &str,
+    message: &str,
+) -> AppResult<()> {
+    let (clean, _) = truncate_chars(message, 4000);
+    conn.execute(
+        "UPDATE messages
+         SET status = 'error',
+             content = CASE
+               WHEN TRIM(content) = '' THEN ?2
+               ELSE content || char(10,10) || ?2
+             END
+         WHERE conversation_id = ?1 AND status = 'streaming'",
+        params![conversation_id, format!("خطا: {clean}")],
+    )?;
+    Ok(())
+}
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -571,23 +589,4 @@ mod tests {
         assert_eq!(messages.len(), 3);
         assert_eq!(messages.last().unwrap().content, "second");
     }
-}
-
-pub fn mark_streaming_messages_error(
-    conn: &Connection,
-    conversation_id: &str,
-    message: &str,
-) -> AppResult<()> {
-    let (clean, _) = truncate_chars(message, 4000);
-    conn.execute(
-        "UPDATE messages
-         SET status = 'error',
-             content = CASE
-               WHEN TRIM(content) = '' THEN ?2
-               ELSE content || char(10,10) || ?2
-             END
-         WHERE conversation_id = ?1 AND status = 'streaming'",
-        params![conversation_id, format!("خطا: {clean}")],
-    )?;
-    Ok(())
 }

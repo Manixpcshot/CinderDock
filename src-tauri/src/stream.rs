@@ -196,7 +196,7 @@ impl StreamParser {
             self.finished |= update.done;
         }
         let mut tool_calls = Vec::new();
-        for (_, partial) in self.partials.iter() {
+        for partial in self.partials.values() {
             if partial.name.trim().is_empty() {
                 continue;
             }

@@ -430,15 +430,7 @@ impl ToolRunner {
             if is_sensitive_path(relative) {
                 continue;
             }
-            files.push(format!(
-                "[{}] {}",
-                if entry.metadata().map(|m| m.is_file()).unwrap_or(false) {
-                    "file"
-                } else {
-                    "file"
-                },
-                relative.display()
-            ));
+            files.push(format!("[file] {}", relative.display()));
             if files.len() >= 500 {
                 files.push("… [CinderDock: file list truncated at 500 items]".into());
                 break;
@@ -1066,6 +1058,7 @@ Write-Output "scrolled"
         Ok(decision != ApprovalDecision::Deny)
     }
 
+    #[allow(clippy::too_many_arguments)]
     async fn ask_approval(
         &self,
         tool_name: &str,
@@ -1358,9 +1351,11 @@ fn html_decode(input: &str) -> String {
 }
 
 fn strip_html(input: &str) -> String {
-    let scripts = Regex::new(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>")
-        .unwrap()
-        .replace_all(input, " ");
+    let scripts = Regex::new(
+        r"(?is)<script[^>]*>.*?</script>|<style[^>]*>.*?</style>|<noscript[^>]*>.*?</noscript>",
+    )
+    .unwrap()
+    .replace_all(input, " ");
     let tags = Regex::new(r"(?s)<[^>]+>")
         .unwrap()
         .replace_all(&scripts, " ");

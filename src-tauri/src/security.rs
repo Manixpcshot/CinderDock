@@ -183,8 +183,7 @@ pub fn hash_text(text: &str) -> String {
 
 pub fn truncate_chars(text: &str, max: usize) -> (String, bool) {
     let mut out = String::new();
-    let mut count = 0usize;
-    for ch in text.chars() {
+    for (count, ch) in text.chars().enumerate() {
         if count >= max {
             return (
                 format!("{out}\n… [CinderDock: output truncated at {max} characters]"),
@@ -192,7 +191,6 @@ pub fn truncate_chars(text: &str, max: usize) -> (String, bool) {
             );
         }
         out.push(ch);
-        count += 1;
     }
     (out, false)
 }
@@ -219,7 +217,7 @@ pub fn redact_text(secrets: &[String], input: &str) -> String {
         (r"sk-[A-Za-z0-9_\-]{16,}", "[REDACTED]"),
     ];
     for (pattern, replacement) in PATTERNS {
-        if let Ok(re) = Regex::new(*pattern) {
+        if let Ok(re) = Regex::new(pattern) {
             output = re.replace_all(&output, *replacement).into_owned();
         }
     }
@@ -351,7 +349,7 @@ mod tests {
     fn redacts_known_secrets_and_key_shapes() {
         let secret = format!("{}-{}", "sk", "super-secret-value-123456");
         let redacted = redact_text(
-            &[secret.clone()],
+            std::slice::from_ref(&secret),
             &format!(
                 "Authorization: Bearer {secret} and {}-abcdefghijklmnopqrst",
                 "sk"
