@@ -1,0 +1,924 @@
+[1m[92m Downloading[0m crates ...
+[1m[92m  Downloaded[0m alloc-no-stdlib v3.0.0
+[1m[92m  Downloaded[0m cfg_aliases v0.2.2
+[1m[92m  Downloaded[0m alloc-stdlib v0.3.0
+[1m[92m  Downloaded[0m adler2 v2.0.1
+[1m[92m  Downloaded[0m foldhash v0.2.0
+[1m[92m  Downloaded[0m ahash v0.8.12
+[1m[92m  Downloaded[0m gdkwayland-sys v0.18.2
+[1m[92m  Downloaded[0m atomic-waker v1.1.2
+[1m[92m  Downloaded[0m anyhow v1.0.104
+[1m[92m  Downloaded[0m atk-sys v0.18.2
+[1m[92m  Downloaded[0m quinn v0.11.12
+[1m[92m  Downloaded[0m rustc-hash v2.1.3
+[1m[92m  Downloaded[0m slab v0.4.12
+[1m[92m  Downloaded[0m atk v0.18.2
+[1m[92m  Downloaded[0m autocfg v1.5.1
+[1m[92m  Downloaded[0m bit-set v0.8.0
+[1m[92m  Downloaded[0m cpufeatures v0.2.17
+[1m[92m  Downloaded[0m crc32fast v1.5.3
+[1m[92m  Downloaded[0m aho-corasick v1.1.5
+[1m[92m  Downloaded[0m async-compression v0.4.51
+[1m[92m  Downloaded[0m darling_macro v0.24.1
+[1m[92m  Downloaded[0m serde-untagged v0.1.9
+[1m[92m  Downloaded[0m cairo-rs v0.18.5
+[1m[92m  Downloaded[0m cargo_metadata v0.19.2
+[1m[92m  Downloaded[0m cfg-expr v0.15.8
+[1m[92m  Downloaded[0m deranged v0.5.9
+[1m[92m  Downloaded[0m digest v0.10.7
+[1m[92m  Downloaded[0m cargo-platform v0.1.9
+[1m[92m  Downloaded[0m compression-codecs v0.4.46
+[1m[92m  Downloaded[0m ctor v1.0.13
+[1m[92m  Downloaded[0m cpufeatures v0.3.1
+[1m[92m  Downloaded[0m dirs-sys v0.4.1
+[1m[92m  Downloaded[0m displaydoc v0.2.7
+[1m[92m  Downloaded[0m dlopen2_derive v0.4.3
+[1m[92m  Downloaded[0m dpi v0.1.2
+[1m[92m  Downloaded[0m futures-macro v0.3.34
+[1m[92m  Downloaded[0m futures-task v0.3.34
+[1m[92m  Downloaded[0m futures-sink v0.3.34
+[1m[92m  Downloaded[0m gdk-pixbuf-sys v0.18.0
+[1m[92m  Downloaded[0m cairo-sys-rs v0.18.2
+[1m[92m  Downloaded[0m equivalent v1.0.3
+[1m[92m  Downloaded[0m regex-automata v0.4.18
+[1m[92m  Downloaded[0m precomputed-hash v0.1.1
+[1m[92m  Downloaded[0m dtoa-short v0.3.5
+[1m[92m  Downloaded[0m errno v0.3.14
+[1m[92m  Downloaded[0m fallible-streaming-iterator v0.1.9
+[1m[92m  Downloaded[0m field-offset v0.3.6
+[1m[92m  Downloaded[0m signal-hook-registry v1.4.8
+[1m[92m  Downloaded[0m serde_with_macros v3.24.0
+[1m[92m  Downloaded[0m schemars_derive v0.8.22
+[1m[92m  Downloaded[0m schemars v0.8.22
+[1m[92m  Downloaded[0m servo_arc v0.4.3
+[1m[92m  Downloaded[0m shlex v2.0.1
+[1m[92m  Downloaded[0m tauri-runtime v2.12.2
+[1m[92m  Downloaded[0m ryu v1.0.23
+[1m[92m  Downloaded[0m serde_core v1.0.229
+[1m[92m  Downloaded[0m serde_derive v1.0.229
+[1m[92m  Downloaded[0m bs58 v0.5.1
+[1m[92m  Downloaded[0m compression-core v0.4.34
+[1m[92m  Downloaded[0m erased-serde v0.4.11
+[1m[92m  Downloaded[0m find-msvc-tools v0.1.15
+[1m[92m  Downloaded[0m raw-window-handle v0.6.2
+[1m[92m  Downloaded[0m rustc_version v0.4.1
+[1m[92m  Downloaded[0m serialize-to-javascript v0.1.2
+[1m[92m  Downloaded[0m synstructure v0.14.0
+[1m[92m  Downloaded[0m thread_local v1.1.10
+[1m[92m  Downloaded[0m ref-cast-impl v1.0.27
+[1m[92m  Downloaded[0m serde_spanned v0.6.9
+[1m[92m  Downloaded[0m serde_spanned v1.1.2
+[1m[92m  Downloaded[0m subtle v2.6.1
+[1m[92m  Downloaded[0m sync_wrapper v1.0.2
+[1m[92m  Downloaded[0m block-buffer v0.10.4
+[1m[92m  Downloaded[0m futures-io v0.3.34
+[1m[92m  Downloaded[0m crypto-common v0.1.7
+[1m[92m  Downloaded[0m cssparser-macros v0.7.1
+[1m[92m  Downloaded[0m dirs v5.0.1
+[1m[92m  Downloaded[0m dirs-sys v0.5.0
+[1m[92m  Downloaded[0m fnv v1.0.7
+[1m[92m  Downloaded[0m dyn-clone v1.0.20
+[1m[92m  Downloaded[0m fallible-iterator v0.3.0
+[1m[92m  Downloaded[0m lazy_static v1.5.1
+[1m[92m  Downloaded[0m bitflags v1.3.2
+[1m[92m  Downloaded[0m camino v1.2.6
+[1m[92m  Downloaded[0m dunce v1.0.5
+[1m[92m  Downloaded[0m cfg-if v1.0.5
+[1m[92m  Downloaded[0m defmt-parser v1.1.0
+[1m[92m  Downloaded[0m dirs v7.0.0
+[1m[92m  Downloaded[0m form_urlencoded v1.2.2
+[1m[92m  Downloaded[0m futures-core v0.3.34
+[1m[92m  Downloaded[0m string_cache_codegen v0.6.1
+[1m[92m  Downloaded[0m darling v0.24.1
+[1m[92m  Downloaded[0m memoffset v0.9.1
+[1m[92m  Downloaded[0m mime v0.3.17
+[1m[92m  Downloaded[0m gdkx11 v0.18.2
+[1m[92m  Downloaded[0m itoa v1.0.18
+[1m[92m  Downloaded[0m bit-vec v0.8.0
+[1m[92m  Downloaded[0m dlopen2 v0.8.2
+[1m[92m  Downloaded[0m futures-executor v0.3.34
+[1m[92m  Downloaded[0m gdk-pixbuf v0.18.5
+[1m[92m  Downloaded[0m dtoa v1.0.11
+[1m[92m  Downloaded[0m fastrand v2.5.0
+[1m[92m  Downloaded[0m proc-macro-crate v1.3.1
+[1m[92m  Downloaded[0m try-lock v0.2.5
+[1m[92m  Downloaded[0m typeid v1.0.3
+[1m[92m  Downloaded[0m bitflags v2.13.2
+[1m[92m  Downloaded[0m byteorder v1.5.0
+[1m[92m  Downloaded[0m cargo_toml v1.0.1
+[1m[92m  Downloaded[0m cookie v0.18.2
+[1m[92m  Downloaded[0m crossbeam-utils v0.8.23
+[1m[92m  Downloaded[0m defmt v1.2.0
+[1m[92m  Downloaded[0m defmt-macros v1.2.0
+[1m[92m  Downloaded[0m gdkx11-sys v0.18.2
+[1m[92m  Downloaded[0m generic-array v0.14.7
+[1m[92m  Downloaded[0m markup5ever v0.39.0
+[1m[92m  Downloaded[0m num-conv v0.2.2
+[1m[92m  Downloaded[0m rustversion v1.0.23
+[1m[92m  Downloaded[0m schemars v1.2.3
+[1m[92m  Downloaded[0m chacha20 v0.10.2
+[1m[92m  Downloaded[0m core_detect v1.0.0
+[1m[92m  Downloaded[0m embed-resource v3.0.12
+[1m[92m  Downloaded[0m fdeflate v0.3.7
+[1m[92m  Downloaded[0m gdk v0.18.2
+[1m[92m  Downloaded[0m indexmap v1.9.3
+[1m[92m  Downloaded[0m ipnet v2.12.2
+[1m[92m  Downloaded[0m rand_pcg v0.10.2
+[1m[92m  Downloaded[0m same-file v1.0.6
+[1m[92m  Downloaded[0m scopeguard v1.2.0
+[1m[92m  Downloaded[0m serialize-to-javascript-impl v0.1.2
+[1m[92m  Downloaded[0m siphasher v1.0.4
+[1m[92m  Downloaded[0m strsim v0.11.1
+[1m[92m  Downloaded[0m tray-icon v0.25.1
+[1m[92m  Downloaded[0m base64 v0.22.1
+[1m[92m  Downloaded[0m base64 v0.23.1
+[1m[92m  Downloaded[0m bytes v1.12.1
+[1m[92m  Downloaded[0m cfb v0.14.0
+[1m[92m  Downloaded[0m crossbeam-channel v0.5.17
+[1m[92m  Downloaded[0m cssparser v0.37.0
+[1m[92m  Downloaded[0m darling_core v0.24.1
+[1m[92m  Downloaded[0m dbus v0.9.12
+[1m[92m  Downloaded[0m derive_more v2.1.1
+[1m[92m  Downloaded[0m dom_query v0.28.0
+[1m[92m  Downloaded[0m flate2 v1.1.10
+[1m[92m  Downloaded[0m futures-channel v0.3.34
+[1m[92m  Downloaded[0m gdk-sys v0.18.2
+[1m[92m  Downloaded[0m getrandom v0.2.17
+[1m[92m  Downloaded[0m getrandom v0.3.4
+[1m[92m  Downloaded[0m icu_provider v2.4.0
+[1m[92m  Downloaded[0m libappindicator v0.9.0
+[1m[92m  Downloaded[0m num-traits v0.2.19
+[1m[92m  Downloaded[0m proc-macro-crate v2.0.2
+[1m[92m  Downloaded[0m proc-macro-error-attr v1.0.4
+[1m[92m  Downloaded[0m rand_core v0.10.1
+[1m[92m  Downloaded[0m ref-cast v1.0.27
+[1m[92m  Downloaded[0m serde_derive_internals v0.29.1
+[1m[92m  Downloaded[0m serde_repr v0.1.21
+[1m[92m  Downloaded[0m serde_urlencoded v0.7.1
+[1m[92m  Downloaded[0m simd-adler32 v0.3.10
+[1m[92m  Downloaded[0m soup3-sys v0.5.0
+[1m[92m  Downloaded[0m stable_deref_trait v1.2.1
+[1m[92m  Downloaded[0m static_vcruntime v3.0.0
+[1m[92m  Downloaded[0m string_cache v0.9.0
+[1m[92m  Downloaded[0m thiserror-impl v1.0.69
+[1m[92m  Downloaded[0m thiserror-impl v2.0.21
+[1m[92m  Downloaded[0m toml v0.8.2
+[1m[92m  Downloaded[0m tower v0.5.3
+[1m[92m  Downloaded[0m typenum v1.20.1
+[1m[92m  Downloaded[0m cc v1.10.0
+[1m[92m  Downloaded[0m derive_more-impl v2.1.1
+[1m[92m  Downloaded[0m futures-util v0.3.34
+[1m[92m  Downloaded[0m http v1.5.0
+[1m[92m  Downloaded[0m jiff-core v0.1.1
+[1m[92m  Downloaded[0m new_debug_unreachable v1.0.6
+[1m[92m  Downloaded[0m option-ext v0.2.0
+[1m[92m  Downloaded[0m parking_lot v0.12.5
+[1m[92m  Downloaded[0m phf_codegen v0.13.1
+[1m[92m  Downloaded[0m phf_generator v0.13.1
+[1m[92m  Downloaded[0m proc-macro-error v1.0.4
+[1m[92m  Downloaded[0m quote v1.0.47
+[1m[92m  Downloaded[0m rustls-pki-types v1.15.1
+[1m[92m  Downloaded[0m semver v1.0.28
+[1m[92m  Downloaded[0m sha2 v0.10.9
+[1m[92m  Downloaded[0m simdutf8 v0.1.5
+[1m[92m  Downloaded[0m smallvec v1.16.4
+[1m[92m  Downloaded[0m soup3 v0.5.0
+[1m[92m  Downloaded[0m system-deps v6.2.2
+[1m[92m  Downloaded[0m target-lexicon v0.12.16
+[1m[92m  Downloaded[0m tauri-build v2.7.4
+[1m[92m  Downloaded[0m tauri-codegen v2.7.4
+[1m[92m  Downloaded[0m tauri-macros v2.7.4
+[1m[92m  Downloaded[0m tauri-plugin v2.7.2
+[1m[92m  Downloaded[0m tempfile v3.27.0
+[1m[92m  Downloaded[0m thiserror v1.0.69
+[1m[92m  Downloaded[0m thiserror v2.0.21
+[1m[92m  Downloaded[0m tokio-util v0.7.20
+[1m[92m  Downloaded[0m tracing-attributes v0.1.31
+[1m[92m  Downloaded[0m tracing-core v0.1.36
+[1m[92m  Downloaded[0m tracing-subscriber v0.3.23
+[1m[92m  Downloaded[0m unicode-ident v1.0.27
+[1m[92m  Downloaded[0m utf8_iter v1.0.4
+[1m[92m  Downloaded[0m winnow v1.0.4
+[1m[92m  Downloaded[0m wry v0.57.1
+[1m[92m  Downloaded[0m brotli-decompressor v6.2.0
+[1m[92m  Downloaded[0m chrono v0.4.45
+[1m[92m  Downloaded[0m gio v0.18.4
+[1m[92m  Downloaded[0m hyper-rustls v0.27.10
+[1m[92m  Downloaded[0m hyper-util v0.1.21
+[1m[92m  Downloaded[0m litemap v0.8.3
+[1m[92m  Downloaded[0m once_cell v1.21.4
+[1m[92m  Downloaded[0m pango v0.18.3
+[1m[92m  Downloaded[0m parking_lot_core v0.9.12
+[1m[92m  Downloaded[0m phf v0.13.1
+[1m[92m  Downloaded[0m proc-macro2 v1.0.107
+[1m[92m  Downloaded[0m quinn-udp v0.5.16
+[1m[92m  Downloaded[0m rfd v0.16.1
+[1m[92m  Downloaded[0m schemars v0.9.0
+[1m[92m  Downloaded[0m sharded-slab v0.1.7
+[1m[92m  Downloaded[0m socket2 v0.6.5
+[1m[92m  Downloaded[0m tauri-plugin-dialog v2.8.3
+[1m[92m  Downloaded[0m tauri-runtime-wry v2.12.3
+[1m[92m  Downloaded[0m tauri-winres v0.3.7
+[1m[92m  Downloaded[0m tendril v0.5.1
+[1m[92m  Downloaded[0m time-core v0.1.9
+[1m[92m  Downloaded[0m time-macros v0.2.32
+[1m[92m  Downloaded[0m tinystr v0.8.5
+[1m[92m  Downloaded[0m tinyvec v1.13.3
+[1m[92m  Downloaded[0m getrandom v0.4.3
+[1m[92m  Downloaded[0m gtk3-macros v0.18.2
+[1m[92m  Downloaded[0m html5ever v0.39.0
+[1m[92m  Downloaded[0m icu_normalizer_data v2.4.0
+[1m[92m  Downloaded[0m infer v0.22.0
+[1m[92m  Downloaded[0m javascriptcore-rs v1.1.2
+[1m[92m  Downloaded[0m keyboard-types v0.8.3
+[1m[92m  Downloaded[0m libloading v0.7.4
+[1m[92m  Downloaded[0m miniz_oxide v0.9.1
+[1m[92m  Downloaded[0m phf_macros v0.13.1
+[1m[92m  Downloaded[0m phf_shared v0.13.1
+[1m[92m  Downloaded[0m rustls-webpki v0.103.16
+[1m[92m  Downloaded[0m selectors v0.38.0
+[1m[92m  Downloaded[0m serde v1.0.229
+[1m[92m  Downloaded[0m similar v2.7.0
+[1m[92m  Downloaded[0m tauri-plugin-fs v2.7.1
+[1m[92m  Downloaded[0m toml v1.1.8+spec-1.1.0
+[1m[92m  Downloaded[0m toml_datetime v0.6.3
+[1m[92m  Downloaded[0m url v2.5.8
+[1m[92m  Downloaded[0m writeable v0.6.4
+[1m[92m  Downloaded[0m yoke-derive v0.8.4
+[1m[92m  Downloaded[0m zlib-rs v0.6.8
+[1m[92m  Downloaded[0m encoding_rs v0.8.42
+[1m[92m  Downloaded[0m gio-sys v0.18.1
+[1m[92m  Downloaded[0m icu_normalizer v2.4.0
+[1m[92m  Downloaded[0m icu_properties_data v2.4.0
+[1m[92m  Downloaded[0m idna_adapter v1.2.2
+[1m[92m  Downloaded[0m javascriptcore-rs-sys v1.1.1
+[1m[92m  Downloaded[0m pin-project-lite v0.2.17
+[1m[92m  Downloaded[0m rand v0.10.3
+[1m[92m  Downloaded[0m tokio-rustls v0.26.6
+[1m[92m  Downloaded[0m toml_edit v0.19.15
+[1m[92m  Downloaded[0m tracing-log v0.2.0
+[1m[92m  Downloaded[0m zeroize v1.9.1
+[1m[92m  Downloaded[0m zmij v1.0.23
+[1m[92m  Downloaded[0m brotli v9.1.0
+[1m[92m  Downloaded[0m http-body v1.1.0
+[1m[92m  Downloaded[0m icu_locale_core v2.4.0
+[1m[92m  Downloaded[0m ident_case v1.0.1
+[1m[92m  Downloaded[0m libappindicator-sys v0.9.0
+[1m[92m  Downloaded[0m percent-encoding v2.3.2
+[1m[92m  Downloaded[0m pkg-config v0.3.34
+[1m[92m  Downloaded[0m reqwest v0.12.28
+[1m[92m  Downloaded[0m rusqlite v0.32.1
+[1m[92m  Downloaded[0m serde_json v1.0.154
+[1m[92m  Downloaded[0m tauri-utils v2.10.2
+[1m[92m  Downloaded[0m untrusted v0.9.0
+[1m[92m  Downloaded[0m uuid v1.29.0
+[1m[92m  Downloaded[0m webkit2gtk-sys v2.0.2
+[1m[92m  Downloaded[0m winnow v0.5.40
+[1m[92m  Downloaded[0m glib-sys v0.18.1
+[1m[92m  Downloaded[0m gobject-sys v0.18.0
+[1m[92m  Downloaded[0m gtk-sys v0.18.2
+[1m[92m  Downloaded[0m hashbrown v0.12.3
+[1m[92m  Downloaded[0m http-body-util v0.1.5
+[1m[92m  Downloaded[0m ico v0.6.0
+[1m[92m  Downloaded[0m icu_properties v2.4.0
+[1m[92m  Downloaded[0m jsonptr v0.7.1
+[1m[92m  Downloaded[0m miniz_oxide v0.8.9
+[1m[92m  Downloaded[0m regex v1.13.1
+[1m[92m  Downloaded[0m serde_with v3.24.0
+[1m[92m  Downloaded[0m toml_edit v0.20.2
+[1m[92m  Downloaded[0m toml_parser v1.1.5+spec-1.1.0
+[1m[92m  Downloaded[0m tower-http v0.6.11
+[1m[92m  Downloaded[0m urlpattern v0.6.0
+[1m[92m  Downloaded[0m x11-dl v2.21.0
+[1m[92m  Downloaded[0m zerofrom v0.1.8
+[1m[92m  Downloaded[0m hashlink v0.9.1
+[1m[92m  Downloaded[0m muda v0.20.0
+[1m[92m  Downloaded[0m multiversion_no_op v1.0.0
+[1m[92m  Downloaded[0m png v0.18.1
+[1m[92m  Downloaded[0m syn v1.0.109
+[1m[92m  Downloaded[0m version_check v0.9.5
+[1m[92m  Downloaded[0m want v0.3.2
+[1m[92m  Downloaded[0m yoke v0.8.4
+[1m[92m  Downloaded[0m zerofrom-derive v0.1.8
+[1m[92m  Downloaded[0m zerovec v0.11.9
+[1m[92m  Downloaded[0m hex v0.4.3
+[1m[92m  Downloaded[0m icu_collections v2.4.0
+[1m[92m  Downloaded[0m idna v1.1.0
+[1m[92m  Downloaded[0m quick-xml v0.42.0
+[1m[92m  Downloaded[0m webpki-roots v1.0.11
+[1m[92m  Downloaded[0m x11 v2.21.0
+[1m[92m  Downloaded[0m h2 v0.4.20
+[1m[92m  Downloaded[0m log v0.4.34
+[1m[92m  Downloaded[0m matchers v0.2.0
+[1m[92m  Downloaded[0m nu-ansi-term v0.50.3
+[1m[92m  Downloaded[0m quinn-proto v0.11.19
+[1m[92m  Downloaded[0m syn v2.0.119
+[1m[92m  Downloaded[0m syn v3.0.9
+[1m[92m  Downloaded[0m time v0.3.55
+[1m[92m  Downloaded[0m tokio-macros v2.7.2
+[1m[92m  Downloaded[0m toml_writer v1.1.3+spec-1.1.0
+[1m[92m  Downloaded[0m tower-layer v0.3.3
+[1m[92m  Downloaded[0m glib v0.18.5
+[1m[92m  Downloaded[0m libdbus-sys v0.2.7
+[1m[92m  Downloaded[0m memchr v2.8.3
+[1m[92m  Downloaded[0m rustix v1.1.5
+[1m[92m  Downloaded[0m tao v0.37.2
+[1m[92m  Downloaded[0m tauri v2.12.5
+[1m[92m  Downloaded[0m webkit2gtk v2.0.2
+[1m[92m  Downloaded[0m hashbrown v0.17.1
+[1m[92m  Downloaded[0m mio v1.2.4
+[1m[92m  Downloaded[0m zerotrie v0.2.5
+[1m[92m  Downloaded[0m zerovec-derive v0.11.7
+[1m[92m  Downloaded[0m libc v0.2.191
+[1m[92m  Downloaded[0m powerfmt v0.2.1
+[1m[92m  Downloaded[0m regex-syntax v0.8.11
+[1m[92m  Downloaded[0m rustls v0.23.46
+[1m[92m  Downloaded[0m tower-service v0.3.3
+[1m[92m  Downloaded[0m gtk v0.18.2
+[1m[92m  Downloaded[0m hashbrown v0.14.5
+[1m[92m  Downloaded[0m vcpkg v0.2.15
+[1m[92m  Downloaded[0m zerocopy v0.8.63
+[1m[92m  Downloaded[0m web-time v1.1.0
+[1m[92m  Downloaded[0m glib-macros v0.18.5
+[1m[92m  Downloaded[0m jiff v0.2.38
+[1m[92m  Downloaded[0m potential_utf v0.1.6
+[1m[92m  Downloaded[0m web_atoms v0.2.6
+[1m[92m  Downloaded[0m tokio v1.54.1
+[1m[92m  Downloaded[0m iana-time-zone v0.1.65
+[1m[92m  Downloaded[0m tracing v0.1.44
+[1m[92m  Downloaded[0m indexmap v2.14.2
+[1m[92m  Downloaded[0m version-compare v0.2.1
+[1m[92m  Downloaded[0m lock_api v0.4.14
+[1m[92m  Downloaded[0m heck v0.4.1
+[1m[92m  Downloaded[0m walkdir v2.5.0
+[1m[92m  Downloaded[0m glob v0.3.4
+[1m[92m  Downloaded[0m json-patch v4.2.0
+[1m[92m  Downloaded[0m ring v0.17.14
+[1m[92m  Downloaded[0m toml_datetime v1.1.2+spec-1.1.0
+[1m[92m  Downloaded[0m plist v1.10.3
+[1m[92m  Downloaded[0m lru-slab v0.1.3
+[1m[92m  Downloaded[0m httparse v1.10.1
+[1m[92m  Downloaded[0m pango-sys v0.18.0
+[1m[92m  Downloaded[0m hyper v1.12.0
+[1m[92m  Downloaded[0m libsqlite3-sys v0.30.1
+[1m[92m  Downloaded[0m heck v0.5.0
+[1m[92m  Downloaded[0m linux-raw-sys v0.12.1
+[1m[92m   Compiling[0m proc-macro2 v1.0.107
+[1m[92m   Compiling[0m unicode-ident v1.0.27
+[1m[92m   Compiling[0m quote v1.0.47
+[1m[92m   Compiling[0m serde_core v1.0.229
+[1m[92m   Compiling[0m libc v0.2.191
+[1m[92m   Compiling[0m serde v1.0.229
+[1m[92m   Compiling[0m smallvec v1.16.4
+[1m[92m   Compiling[0m equivalent v1.0.3
+[1m[92m   Compiling[0m hashbrown v0.17.1
+[1m[92m   Compiling[0m pkg-config v0.3.34
+[1m[92m   Compiling[0m indexmap v2.14.2
+[1m[92m   Compiling[0m heck v0.5.0
+[1m[92m   Compiling[0m syn v3.0.9
+[1m[92m   Compiling[0m winnow v0.5.40
+[1m[92m   Compiling[0m target-lexicon v0.12.16
+[1m[92m   Compiling[0m version-compare v0.2.1
+[1m[92m   Compiling[0m syn v2.0.119
+[1m[92m   Compiling[0m version_check v0.9.5
+[1m[92m   Compiling[0m cfg-expr v0.15.8
+[1m[92m    Checking[0m cfg-if v1.0.5
+[1m[92m   Compiling[0m parking_lot_core v0.9.12
+[1m[92m    Checking[0m once_cell v1.21.4
+[1m[92m    Checking[0m memchr v2.8.3
+[1m[92m   Compiling[0m siphasher v1.0.4
+[1m[92m   Compiling[0m phf_shared v0.13.1
+[1m[92m   Compiling[0m icu_normalizer_data v2.4.0
+[1m[92m   Compiling[0m synstructure v0.14.0
+[1m[92m    Checking[0m pin-project-lite v0.2.17
+[1m[92m   Compiling[0m icu_properties_data v2.4.0
+[1m[92m   Compiling[0m fastrand v2.5.0
+[1m[92m   Compiling[0m autocfg v1.5.1
+[1m[92m   Compiling[0m phf_generator v0.13.1
+[1m[92m   Compiling[0m stable_deref_trait v1.2.1
+[1m[92m    Checking[0m futures-core v0.3.34
+[1m[92m   Compiling[0m zmij v1.0.23
+[1m[92m   Compiling[0m semver v1.0.28
+[1m[92m   Compiling[0m getrandom v0.4.3
+[1m[92m   Compiling[0m serde_derive v1.0.229
+[1m[92m   Compiling[0m zerofrom-derive v0.1.8
+[1m[92m   Compiling[0m yoke-derive v0.8.4
+[1m[92m   Compiling[0m zerovec-derive v0.11.7
+[1m[92m   Compiling[0m displaydoc v0.2.7
+[1m[92m   Compiling[0m zerofrom v0.1.8
+[1m[92m   Compiling[0m yoke v0.8.4
+[1m[92m    Checking[0m slab v0.4.12
+[1m[92m   Compiling[0m phf_macros v0.13.1
+[1m[92m   Compiling[0m futures-macro v0.3.34
+[1m[92m   Compiling[0m zerovec v0.11.9
+[1m[92m    Checking[0m futures-task v0.3.34
+[1m[92m   Compiling[0m thiserror v2.0.21
+[1m[92m    Checking[0m futures-util v0.3.34
+[1m[92m   Compiling[0m thiserror-impl v2.0.21
+[1m[92m    Checking[0m bitflags v2.13.2
+[1m[92m   Compiling[0m shlex v2.0.1
+[1m[92m   Compiling[0m typeid v1.0.3
+[1m[92m   Compiling[0m num-conv v0.2.2
+[1m[92m   Compiling[0m time-core v0.1.9
+[1m[92m   Compiling[0m find-msvc-tools v0.1.15
+[1m[92m   Compiling[0m cc v1.10.0
+[1m[92m   Compiling[0m toml_datetime v0.6.3
+[1m[92m   Compiling[0m serde_spanned v0.6.9
+[1m[92m   Compiling[0m tinystr v0.8.5
+[1m[92m   Compiling[0m toml_edit v0.20.2
+[1m[92m   Compiling[0m phf_codegen v0.13.1
+[1m[92m   Compiling[0m proc-macro-error-attr v1.0.4
+[1m[92m   Compiling[0m syn v1.0.109
+[1m[92m   Compiling[0m ident_case v1.0.1
+[1m[92m   Compiling[0m litemap v0.8.3
+[1m[92m   Compiling[0m writeable v0.6.4
+[1m[92m   Compiling[0m strsim v0.11.1
+[1m[92m   Compiling[0m itoa v1.0.18
+[1m[92m   Compiling[0m darling_core v0.24.1
+[1m[92m   Compiling[0m icu_locale_core v2.4.0
+[1m[92m   Compiling[0m potential_utf v0.1.6
+[1m[92m   Compiling[0m zerotrie v0.2.5
+[1m[92m    Checking[0m futures-channel v0.3.34
+[1m[92m   Compiling[0m toml v0.8.2
+[1m[92m   Compiling[0m proc-macro-error v1.0.4
+[1m[92m   Compiling[0m erased-serde v0.4.11
+[1m[92m   Compiling[0m system-deps v6.2.2
+[1m[92m   Compiling[0m utf8_iter v1.0.4
+[1m[92m   Compiling[0m icu_collections v2.4.0
+[1m[92m   Compiling[0m icu_provider v2.4.0
+[1m[92m   Compiling[0m glib-sys v0.18.1
+[1m[92m   Compiling[0m gobject-sys v0.18.0
+[1m[92m   Compiling[0m gio-sys v0.18.1
+[1m[92m   Compiling[0m gdk-sys v0.18.2
+[1m[92m   Compiling[0m scopeguard v1.2.0
+[1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+[1m[92m   Compiling[0m lock_api v0.4.14
+[1m[92m   Compiling[0m darling_macro v0.24.1
+[1m[92m   Compiling[0m phf v0.13.1
+[1m[92m   Compiling[0m rustc_version v0.4.1
+[1m[92m   Compiling[0m darling v0.24.1
+[1m[92m   Compiling[0m string_cache_codegen v0.6.1
+[1m[92m   Compiling[0m serde_json v1.0.154
+[1m[92m   Compiling[0m anyhow v1.0.104
+[1m[92m   Compiling[0m thiserror v1.0.69
+[1m[92m   Compiling[0m precomputed-hash v0.1.1
+[1m[92m   Compiling[0m icu_properties v2.4.0
+[1m[92m   Compiling[0m icu_normalizer v2.4.0
+[1m[92m   Compiling[0m serde_with_macros v3.24.0
+[1m[92m   Compiling[0m web_atoms v0.2.6
+[1m[92m   Compiling[0m parking_lot v0.12.5
+[1m[92m   Compiling[0m cairo-sys-rs v0.18.2
+[1m[92m   Compiling[0m gdk-pixbuf-sys v0.18.0
+[1m[92m   Compiling[0m pango-sys v0.18.0
+[1m[92m   Compiling[0m atk-sys v0.18.2
+[1m[92m   Compiling[0m proc-macro-crate v2.0.2
+[1m[92m   Compiling[0m thiserror-impl v1.0.69
+[1m[92m   Compiling[0m heck v0.4.1
+[1m[92m   Compiling[0m winnow v1.0.4
+[1m[92m    Checking[0m bytes v1.12.1
+[1m[92m   Compiling[0m glib-macros v0.18.5
+[1m[92m   Compiling[0m toml_parser v1.1.5+spec-1.1.0
+[1m[92m   Compiling[0m idna_adapter v1.2.2
+[1m[92m   Compiling[0m string_cache v0.9.0
+[1m[92m    Checking[0m futures-executor v0.3.34
+[1m[92m   Compiling[0m toml_datetime v1.1.2+spec-1.1.0
+[1m[92m   Compiling[0m serde_spanned v1.1.2
+[1m[92m   Compiling[0m dtoa v1.0.11
+[1m[92m   Compiling[0m percent-encoding v2.3.2
+[1m[92m   Compiling[0m log v0.4.34
+[1m[92m   Compiling[0m toml_writer v1.1.3+spec-1.1.0
+[1m[92m   Compiling[0m form_urlencoded v1.2.2
+[1m[92m   Compiling[0m dtoa-short v0.3.5
+[1m[92m   Compiling[0m toml v1.1.8+spec-1.1.0
+[1m[92m   Compiling[0m uuid v1.29.0
+[1m[92m   Compiling[0m idna v1.1.0
+[1m[92m   Compiling[0m tendril v0.5.1
+[1m[92m   Compiling[0m selectors v0.38.0
+[1m[92m    Checking[0m glib v0.18.5
+[1m[92m   Compiling[0m derive_more-impl v2.1.1
+[1m[92m   Compiling[0m aho-corasick v1.1.5
+[1m[92m   Compiling[0m cssparser-macros v0.7.1
+[1m[92m   Compiling[0m indexmap v1.9.3
+[1m[92m   Compiling[0m regex-syntax v0.8.11
+[1m[92m   Compiling[0m camino v1.2.6
+[1m[92m   Compiling[0m alloc-no-stdlib v3.0.0
+[1m[92m   Compiling[0m alloc-stdlib v0.3.0
+[1m[92m   Compiling[0m derive_more v2.1.1
+[1m[92m   Compiling[0m cssparser v0.37.0
+[1m[92m   Compiling[0m url v2.5.8
+[1m[92m   Compiling[0m markup5ever v0.39.0
+[1m[92m   Compiling[0m gtk-sys v0.18.2
+[1m[92m   Compiling[0m regex-automata v0.4.18
+[1m[92m   Compiling[0m serde_derive_internals v0.29.1
+[1m[92m   Compiling[0m servo_arc v0.4.3
+[1m[92m   Compiling[0m web-time v1.1.0
+[1m[92m   Compiling[0m schemars v0.8.22
+[1m[92m   Compiling[0m powerfmt v0.2.1
+[1m[92m   Compiling[0m deranged v0.5.9
+[1m[92m   Compiling[0m hashbrown v0.12.3
+[1m[92m   Compiling[0m rustc-hash v2.1.3
+[1m[92m   Compiling[0m bit-vec v0.8.0
+[1m[92m   Compiling[0m fnv v1.0.7
+[1m[92m   Compiling[0m cfb v0.14.0
+[1m[92m   Compiling[0m time v0.3.55
+[1m[92m   Compiling[0m regex v1.13.1
+[1m[92m   Compiling[0m bit-set v0.8.0
+[1m[92m   Compiling[0m schemars_derive v0.8.22
+[1m[92m   Compiling[0m html5ever v0.39.0
+[1m[92m   Compiling[0m brotli-decompressor v6.2.0
+[1m[92m   Compiling[0m jsonptr v0.7.1
+[1m[92m   Compiling[0m cargo-platform v0.1.9
+[1m[92m   Compiling[0m quick-xml v0.42.0
+[1m[92m   Compiling[0m tauri-utils v2.10.2
+[1m[92m   Compiling[0m foldhash v0.2.0
+[1m[92m   Compiling[0m base64 v0.23.1
+[1m[92m   Compiling[0m dyn-clone v1.0.20
+[1m[92m   Compiling[0m dunce v1.0.5
+[1m[92m   Compiling[0m gio v0.18.4
+[1m[92m   Compiling[0m same-file v1.0.6
+[1m[92m   Compiling[0m walkdir v2.5.0
+[1m[92m   Compiling[0m http v1.5.0
+[1m[92m   Compiling[0m plist v1.10.3
+[1m[92m   Compiling[0m brotli v9.1.0
+[1m[92m   Compiling[0m dom_query v0.28.0
+[1m[92m   Compiling[0m json-patch v4.2.0
+[1m[92m   Compiling[0m cargo_metadata v0.19.2
+[1m[92m   Compiling[0m serde-untagged v0.1.9
+[1m[92m   Compiling[0m urlpattern v0.6.0
+[1m[92m   Compiling[0m infer v0.22.0
+[1m[92m   Compiling[0m serde_with v3.24.0
+[1m[92m   Compiling[0m generic-array v0.14.7
+[1m[92m    Checking[0m futures-io v0.3.34
+[1m[92m   Compiling[0m glob v0.3.4
+[1m[92m   Compiling[0m ctor v1.0.13
+[1m[92m    Checking[0m errno v0.3.14
+[1m[92m    Checking[0m signal-hook-registry v1.4.8
+[1m[92m   Compiling[0m tokio-macros v2.7.2
+[1m[92m    Checking[0m mio v1.2.4
+[1m[92m    Checking[0m socket2 v0.6.5
+[1m[92m    Checking[0m tokio v1.54.1
+[1m[92m   Compiling[0m memoffset v0.9.1
+[1m[92m    Checking[0m cairo-rs v0.18.5
+[1m[92m   Compiling[0m field-offset v0.3.6
+[1m[92m   Compiling[0m toml_edit v0.19.15
+[1m[92m   Compiling[0m option-ext v0.2.0
+[1m[92m   Compiling[0m dirs-sys v0.5.0
+[1m[92m   Compiling[0m proc-macro-crate v1.3.1
+[1m[92m   Compiling[0m embed-resource v3.0.12
+[1m[92m   Compiling[0m soup3-sys v0.5.0
+[1m[92m   Compiling[0m javascriptcore-rs-sys v1.1.1
+[1m[92m   Compiling[0m gtk v0.18.2
+[1m[92m   Compiling[0m simd-adler32 v0.3.10
+[1m[92m   Compiling[0m gtk3-macros v0.18.2
+[1m[92m   Compiling[0m tauri-winres v0.3.7
+[1m[92m    Checking[0m gdk-pixbuf v0.18.5
+[1m[92m    Checking[0m pango v0.18.3
+[1m[92m    Checking[0m gdk v0.18.2
+[1m[92m   Compiling[0m dirs v7.0.0
+[1m[92m    Checking[0m atk v0.18.2
+[1m[92m   Compiling[0m cargo_toml v1.0.1
+[1m[92m   Compiling[0m webkit2gtk-sys v2.0.2
+[1m[92m   Compiling[0m time-macros v0.2.32
+[1m[92m   Compiling[0m x11 v2.21.0
+[1m[92m   Compiling[0m adler2 v2.0.1
+[1m[92m   Compiling[0m crc32fast v1.5.3
+[1m[92m   Compiling[0m typenum v1.20.1
+[1m[92m   Compiling[0m static_vcruntime v3.0.0
+[1m[92m   Compiling[0m tauri-build v2.7.4
+[1m[92m   Compiling[0m gdkx11-sys v0.18.2
+[1m[92m    Checking[0m bitflags v1.3.2
+[1m[92m   Compiling[0m crossbeam-utils v0.8.23
+[1m[92m   Compiling[0m miniz_oxide v0.9.1
+[1m[92m    Checking[0m dpi v0.1.2
+[1m[92m   Compiling[0m ring v0.17.14
+[1m[92m    Checking[0m tracing-core v0.1.36
+[1m[92m   Compiling[0m cookie v0.18.2
+[1m[92m   Compiling[0m x11-dl v2.21.0
+[1m[92m   Compiling[0m libdbus-sys v0.2.7
+[1m[92m    Checking[0m raw-window-handle v0.6.2
+[1m[92m   Compiling[0m flate2 v1.1.10
+[1m[92m    Checking[0m javascriptcore-rs v1.1.2
+[1m[92m    Checking[0m soup3 v0.5.0
+[1m[92m   Compiling[0m tauri v2.12.5
+[1m[92m   Compiling[0m crypto-common v0.1.7
+[1m[92m   Compiling[0m block-buffer v0.10.4
+[1m[92m   Compiling[0m miniz_oxide v0.8.9
+[1m[92m   Compiling[0m tauri-plugin v2.7.2
+[1m[92m   Compiling[0m fdeflate v0.3.7
+[1m[92m   Compiling[0m tracing-attributes v0.1.31
+[1m[92m    Checking[0m zeroize v1.9.1
+[1m[92m    Checking[0m futures-sink v0.3.34
+[1m[92m    Checking[0m tokio-util v0.7.20
+[1m[92m    Checking[0m rustls-pki-types v1.15.1
+[1m[92m    Checking[0m tracing v0.1.44
+[1m[92m   Compiling[0m png v0.18.1
+[1m[92m   Compiling[0m digest v0.10.7
+[1m[92m    Checking[0m crossbeam-channel v0.5.17
+[1m[92m    Checking[0m http-body v1.1.0
+[1m[92m   Compiling[0m dlopen2_derive v0.4.3
+[1m[92m    Checking[0m getrandom v0.2.17
+[1m[92m   Compiling[0m wry v0.57.1
+[1m[92m   Compiling[0m cpufeatures v0.2.17
+[1m[92m   Compiling[0m byteorder v1.5.0
+[1m[92m   Compiling[0m tauri-runtime v2.12.2
+[1m[92m   Compiling[0m httparse v1.10.1
+[1m[92m   Compiling[0m rustversion v1.0.23
+[1m[92m   Compiling[0m zerocopy v0.8.63
+[1m[92m    Checking[0m untrusted v0.9.0
+[1m[92m   Compiling[0m ico v0.6.0
+[1m[92m   Compiling[0m sha2 v0.10.9
+[1m[92m    Checking[0m dlopen2 v0.8.2
+[1m[92m    Checking[0m dbus v0.9.12
+[1m[92m   Compiling[0m tauri-plugin-fs v2.7.1
+[1m[92m    Checking[0m gdkx11 v0.18.2
+[1m[92m    Checking[0m gdkwayland-sys v0.18.2
+[1m[92m   Compiling[0m ahash v0.8.12
+[1m[92m   Compiling[0m muda v0.20.0
+[1m[92m    Checking[0m tower-service v0.3.3
+[1m[92m   Compiling[0m getrandom v0.3.4
+[1m[92m    Checking[0m try-lock v0.2.5
+[1m[92m   Compiling[0m rustls v0.23.46
+[1m[92m    Checking[0m atomic-waker v1.1.2
+[1m[92m   Compiling[0m tauri-runtime-wry v2.12.3
+[1m[92m    Checking[0m h2 v0.4.20
+[1m[92m    Checking[0m want v0.3.2
+[1m[92m   Compiling[0m tauri-codegen v2.7.4
+[1m[92m    Checking[0m webkit2gtk v2.0.2
+[1m[92m    Checking[0m tao v0.37.2
+[1m[92m    Checking[0m keyboard-types v0.8.3
+[1m[92m   Compiling[0m serialize-to-javascript-impl v0.1.2
+[1m[92m   Compiling[0m vcpkg v0.2.15
+[1m[92m    Checking[0m subtle v2.6.1
+[1m[92m    Checking[0m compression-core v0.4.34
+[1m[92m    Checking[0m mime v0.3.17
+[1m[92m    Checking[0m compression-codecs v0.4.46
+[1m[92m   Compiling[0m libsqlite3-sys v0.30.1
+[1m[92m    Checking[0m rustls-webpki v0.103.16
+[1m[92m    Checking[0m serialize-to-javascript v0.1.2
+[1m[92m   Compiling[0m encoding_rs v0.8.42
+[1m[92m    Checking[0m hyper v1.12.0
+[1m[92m   Compiling[0m tauri-macros v2.7.4
+[1m[92m   Compiling[0m tauri-plugin-dialog v2.8.3
+[1m[92m   Compiling[0m serde_repr v0.1.21
+[1m[92m   Compiling[0m num-traits v0.2.19
+[1m[92m    Checking[0m sync_wrapper v1.0.2
+[1m[92m    Checking[0m ipnet v2.12.2
+[1m[92m   Compiling[0m rfd v0.16.1
+[1m[92m    Checking[0m tower-layer v0.3.3
+[1m[92m    Checking[0m hyper-util v0.1.21
+[1m[92m    Checking[0m tower v0.5.3
+[1m[92m    Checking[0m hashbrown v0.14.5
+[1m[92m    Checking[0m async-compression v0.4.51
+[1m[92m    Checking[0m tokio-rustls v0.26.6
+[1m[92m    Checking[0m http-body-util v0.1.5
+[1m[92m    Checking[0m webpki-roots v1.0.11
+[1m[92m    Checking[0m ryu v1.0.23
+[1m[92m   Compiling[0m multiversion_no_op v1.0.0
+[1m[92m    Checking[0m core_detect v1.0.0
+[1m[92m    Checking[0m lazy_static v1.5.1
+[1m[92m    Checking[0m simdutf8 v0.1.5
+[1m[92m    Checking[0m sharded-slab v0.1.7
+[1m[92m    Checking[0m serde_urlencoded v0.7.1
+[1m[92m    Checking[0m hyper-rustls v0.27.10
+[1m[92m    Checking[0m tower-http v0.6.11
+[1m[92m    Checking[0m hashlink v0.9.1
+[1m[92m    Checking[0m tracing-log v0.2.0
+[1m[92m    Checking[0m dirs-sys v0.4.1
+[1m[92m   Compiling[0m cinderdock v0.1.0 (/home/runner/work/CinderDock/CinderDock/src-tauri)
+[1m[92m    Checking[0m matchers v0.2.0
+[1m[92m    Checking[0m thread_local v1.1.10
+[1m[92m    Checking[0m fallible-streaming-iterator v0.1.9
+[1m[92m   Compiling[0m rustix v1.1.5
+[1m[92m    Checking[0m fallible-iterator v0.3.0
+[1m[92m    Checking[0m base64 v0.22.1
+[1m[92m    Checking[0m nu-ansi-term v0.50.3
+[1m[92m    Checking[0m iana-time-zone v0.1.65
+[1m[92m    Checking[0m chrono v0.4.45
+[1m[92m    Checking[0m tracing-subscriber v0.3.23
+[1m[92m    Checking[0m reqwest v0.12.28
+[1m[92m    Checking[0m dirs v5.0.1
+[1m[92m    Checking[0m similar v2.7.0
+[1m[92m    Checking[0m linux-raw-sys v0.12.1
+[1m[92m    Checking[0m tempfile v3.27.0
+[1m[92m    Checking[0m rusqlite v0.32.1
+[1m[91merror[0m[1m: unused import: `fs`[0m
+ [1m[94m--> [0msrc/secrets.rs:3:5
+  [1m[94m|[0m
+[1m[94m3[0m [1m[94m|[0m     fs,
+  [1m[94m|[0m     [1m[91m^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m: `-D unused-imports` implied by `-D warnings`
+  [1m[94m= [0m[1mhelp[0m: to override `-D warnings` add `#[allow(unused_imports)]`
+
+[1m[91merror[0m[1m: unused import: `base64::Engine`[0m
+ [1m[94m--> [0msrc/secrets.rs:8:5
+  [1m[94m|[0m
+[1m[94m8[0m [1m[94m|[0m use base64::Engine;
+  [1m[94m|[0m     [1m[91m^^^^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: unused import: `AttachmentView`[0m
+ [1m[94m--> [0msrc/db.rs:9:27
+  [1m[94m|[0m
+[1m[94m9[0m [1m[94m|[0m         ApprovalDecision, AttachmentView, ConversationData, ConversationSummary, FileChangeView,
+  [1m[94m|[0m                           [1m[91m^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m: `-D unused-imports` implied by `-D warnings`
+  [1m[94m= [0m[1mhelp[0m: to override `-D warnings` add `#[allow(unused_imports)]`
+
+[1m[91merror[0m[1m: unused import: `fs`[0m
+ [1m[94m--> [0msrc/secrets.rs:3:5
+  [1m[94m|[0m
+[1m[94m3[0m [1m[94m|[0m     fs,
+  [1m[94m|[0m     [1m[91m^^[0m
+
+[1m[91merror[E0308][0m[1m: mismatched types[0m
+    [1m[94m--> [0msrc/tools.rs:1104:13
+     [1m[94m|[0m
+[1m[94m1104[0m [1m[94m|[0m           let (request, receiver, from_session) = match start {
+     [1m[94m|[0m [1m[94m _____________[0m[1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[1m[94m___-[0m
+     [1m[94m|[0m [1m[94m|[0m             [1m[91m|[0m
+     [1m[94m|[0m [1m[94m|[0m             [1m[91mexpected a tuple with 2 elements, found one with 3 elements[0m
+[1m[94m1105[0m [1m[94m|[0m [1m[94m|[0m             ApprovalStart::Granted {
+[1m[94m1106[0m [1m[94m|[0m [1m[94m|[0m                 request,
+[1m[94m1107[0m [1m[94m|[0m [1m[94m|[0m                 from_session,
+[1m[94m...[0m    [1m[94m|[0m
+[1m[94m1122[0m [1m[94m|[0m [1m[94m|[0m             ApprovalStart::Pending { request, receiver } => (request, Some(receiver)),
+[1m[94m1123[0m [1m[94m|[0m [1m[94m|[0m         };
+     [1m[94m|[0m [1m[94m|_________-[0m [1m[94mthis expression has type `(ApprovalRequest, Option<Receiver<ApprovalDecision>>)`[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mnote[0m: expected tuple `[1m[35m(models::ApprovalRequest, std::option::Option<tokio::sync::oneshot::Receiver<models::ApprovalDecision>>)[0m`
+                found tuple `[1m[35m(_, _, _)[0m`
+     [1m[94m= [0m[1mnote[0m: the full name for the type has been written to '/home/runner/work/CinderDock/CinderDock/src-tauri/target/debug/deps/cinderdock_lib-4a147f92386c13e3.long-type-9063677794067489925.txt'
+     [1m[94m= [0m[1mnote[0m: consider using `--verbose` to print the full type name to the console
+
+[1m[91merror[E0277][0m[1m: `?` couldn't convert the error to `error::AppError`[0m
+    [1m[94m--> [0msrc/tools.rs:1319:52
+     [1m[94m|[0m
+[1m[94m1319[0m [1m[94m|[0m     let (stdout, stdout_truncated) = out_task.await??;
+     [1m[94m|[0m                                      [1m[94m--------------[0m[1m[91m^[0m [1m[91mthe trait `std::convert::From<tokio::task::JoinError>` is not implemented for `error::AppError`[0m
+     [1m[94m|[0m                                      [1m[94m|[0m
+     [1m[94m|[0m                                      [1m[94mthis can't be annotated with `?` because it has type `Result<_, tokio::task::JoinError>`[0m
+     [1m[94m|[0m
+[1m[92mnote[0m: `error::AppError` needs to implement `From<tokio::task::JoinError>`
+    [1m[94m--> [0msrc/error.rs:5:1
+     [1m[94m|[0m
+[1m[94m   5[0m [1m[94m|[0m pub enum AppError {
+     [1m[94m|[0m [1m[92m^^^^^^^^^^^^^^^^^[0m
+     [1m[94m= [0m[1mnote[0m: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+     [1m[94m= [0m[1mhelp[0m: `error::AppError` implements trait `std::convert::From<T>`:
+               std::convert::From<reqwest::Error>
+               std::convert::From<rusqlite::Error>
+               std::convert::From<serde_json::Error>
+               std::convert::From<std::io::Error>
+               std::convert::From<url::ParseError>
+
+[1m[91merror[E0277][0m[1m: `?` couldn't convert the error to `error::AppError`[0m
+    [1m[94m--> [0msrc/tools.rs:1320:52
+     [1m[94m|[0m
+[1m[94m1320[0m [1m[94m|[0m     let (stderr, stderr_truncated) = err_task.await??;
+     [1m[94m|[0m                                      [1m[94m--------------[0m[1m[91m^[0m [1m[91mthe trait `std::convert::From<tokio::task::JoinError>` is not implemented for `error::AppError`[0m
+     [1m[94m|[0m                                      [1m[94m|[0m
+     [1m[94m|[0m                                      [1m[94mthis can't be annotated with `?` because it has type `Result<_, tokio::task::JoinError>`[0m
+     [1m[94m|[0m
+[1m[92mnote[0m: `error::AppError` needs to implement `From<tokio::task::JoinError>`
+    [1m[94m--> [0msrc/error.rs:5:1
+     [1m[94m|[0m
+[1m[94m   5[0m [1m[94m|[0m pub enum AppError {
+     [1m[94m|[0m [1m[92m^^^^^^^^^^^^^^^^^[0m
+     [1m[94m= [0m[1mnote[0m: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+     [1m[94m= [0m[1mhelp[0m: `error::AppError` implements trait `std::convert::From<T>`:
+               std::convert::From<reqwest::Error>
+               std::convert::From<rusqlite::Error>
+               std::convert::From<serde_json::Error>
+               std::convert::From<std::io::Error>
+               std::convert::From<url::ParseError>
+
+[1m[91merror[E0277][0m[1m: `?` couldn't convert the error to `error::AppError`[0m
+   [1m[94m--> [0msrc/tools.rs:764:10
+    [1m[94m|[0m
+[1m[94m762[0m [1m[94m|[0m           let re = Regex::new(
+    [1m[94m|[0m [1m[94m __________________-[0m
+[1m[94m763[0m [1m[94m|[0m [1m[94m|[0m             r#"(?is)<a[^>]+class="[^"]*result__a[^"]*"[^>]+href="([^"]+)"[^>]*>(.*?)</a>"#,
+[1m[94m764[0m [1m[94m|[0m [1m[94m|[0m         )?;
+    [1m[94m|[0m [1m[94m|[0m         [1m[94m-[0m[1m[91m^[0m [1m[91mthe trait `std::convert::From<regex::Error>` is not implemented for `error::AppError`[0m
+    [1m[94m|[0m [1m[94m|_________|[0m
+    [1m[94m|[0m           [1m[94mthis can't be annotated with `?` because it has type `Result<_, regex::Error>`[0m
+    [1m[94m|[0m
+[1m[92mnote[0m: `error::AppError` needs to implement `From<regex::Error>`
+   [1m[94m--> [0msrc/error.rs:5:1
+    [1m[94m|[0m
+[1m[94m  5[0m [1m[94m|[0m pub enum AppError {
+    [1m[94m|[0m [1m[92m^^^^^^^^^^^^^^^^^[0m
+    [1m[94m= [0m[1mnote[0m: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+    [1m[94m= [0m[1mhelp[0m: `error::AppError` implements trait `std::convert::From<T>`:
+              std::convert::From<reqwest::Error>
+              std::convert::From<rusqlite::Error>
+              std::convert::From<serde_json::Error>
+              std::convert::From<std::io::Error>
+              std::convert::From<url::ParseError>
+
+[1m[91merror[E0308][0m[1m: mismatched types[0m
+    [1m[94m--> [0msrc/tools.rs:1104:13
+     [1m[94m|[0m
+[1m[94m1104[0m [1m[94m|[0m           let (request, receiver, from_session) = match start {
+     [1m[94m|[0m [1m[94m _____________[0m[1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[1m[94m___-[0m
+     [1m[94m|[0m [1m[94m|[0m             [1m[91m|[0m
+     [1m[94m|[0m [1m[94m|[0m             [1m[91mexpected a tuple with 2 elements, found one with 3 elements[0m
+[1m[94m1105[0m [1m[94m|[0m [1m[94m|[0m             ApprovalStart::Granted {
+[1m[94m1106[0m [1m[94m|[0m [1m[94m|[0m                 request,
+[1m[94m1107[0m [1m[94m|[0m [1m[94m|[0m                 from_session,
+[1m[94m...[0m    [1m[94m|[0m
+[1m[94m1122[0m [1m[94m|[0m [1m[94m|[0m             ApprovalStart::Pending { request, receiver } => (request, Some(receiver)),
+[1m[94m1123[0m [1m[94m|[0m [1m[94m|[0m         };
+     [1m[94m|[0m [1m[94m|_________-[0m [1m[94mthis expression has type `(ApprovalRequest, Option<Receiver<ApprovalDecision>>)`[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mnote[0m: expected tuple `[1m[35m(models::ApprovalRequest, std::option::Option<tokio::sync::oneshot::Receiver<models::ApprovalDecision>>)[0m`
+                found tuple `[1m[35m(_, _, _)[0m`
+     [1m[94m= [0m[1mnote[0m: the full name for the type has been written to '/home/runner/work/CinderDock/CinderDock/src-tauri/target/debug/deps/cinderdock_lib-ba06d9d1e7f23d03.long-type-13311109818333556373.txt'
+     [1m[94m= [0m[1mnote[0m: consider using `--verbose` to print the full type name to the console
+
+[1m[91merror[E0277][0m[1m: `?` couldn't convert the error to `error::AppError`[0m
+   [1m[94m--> [0msrc/tools.rs:804:69
+    [1m[94m|[0m
+[1m[94m804[0m [1m[94m|[0m         let title_re = Regex::new(r"(?is)<title[^>]*>(.*?)</title>")?;
+    [1m[94m|[0m                        [1m[94m---------------------------------------------[0m[1m[91m^[0m [1m[91mthe trait `std::convert::From<regex::Error>` is not implemented for `error::AppError`[0m
+    [1m[94m|[0m                        [1m[94m|[0m
+    [1m[94m|[0m                        [1m[94mthis can't be annotated with `?` because it has type `Result<_, regex::Error>`[0m
+    [1m[94m|[0m
+[1m[92mnote[0m: `error::AppError` needs to implement `From<regex::Error>`
+   [1m[94m--> [0msrc/error.rs:5:1
+    [1m[94m|[0m
+[1m[94m  5[0m [1m[94m|[0m pub enum AppError {
+    [1m[94m|[0m [1m[92m^^^^^^^^^^^^^^^^^[0m
+    [1m[94m= [0m[1mnote[0m: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+    [1m[94m= [0m[1mhelp[0m: `error::AppError` implements trait `std::convert::From<T>`:
+              std::convert::From<reqwest::Error>
+              std::convert::From<rusqlite::Error>
+              std::convert::From<serde_json::Error>
+              std::convert::From<std::io::Error>
+              std::convert::From<url::ParseError>
+
+[1m[91merror[E0308][0m[1m: mismatched types[0m
+   [1m[94m--> [0msrc/commands.rs:561:14
+    [1m[94m|[0m
+[1m[94m561[0m [1m[94m|[0m             &state.db.lock().await,
+    [1m[94m|[0m              [1m[91m^^^^^^^^^^^^^^^^^^^^^[0m [1m[91mexpected `Connection`, found `MutexGuard<'_, Connection>`[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: expected struct `Connection`
+               found struct `[1m[35mtokio::sync::MutexGuard[0m[1m[35m<[0m'_, Connection[1m[35m>[0m`
+
+[1m[91merror[E0277][0m[1m: `approvals::PendingApproval` doesn't implement `std::fmt::Debug`[0m
+  [1m[94m--> [0msrc/approvals.rs:22:5
+   [1m[94m|[0m
+[1m[94m20[0m [1m[94m|[0m #[derive(Debug)]
+   [1m[94m|[0m          [1m[94m-----[0m [1m[94min this derive macro expansion[0m
+[1m[94m21[0m [1m[94m|[0m struct Inner {
+[1m[94m22[0m [1m[94m|[0m     pending: HashMap<String, PendingApproval>,
+   [1m[94m|[0m     [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1m[91mthe trait `std::fmt::Debug` is not implemented for `approvals::PendingApproval`[0m
+   [1m[94m|[0m
+[1m[96mhelp[0m: the trait `std::fmt::Debug` [1m[35mis[0m conditionally implemented for `[1m[35mstd::collections::HashMap<K, V, S, A>[0m`
+  [1m[94m--> [0m/rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/std/src/collections/hash/map.rs:1475:0
+  [1m[94m::: [0m/rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/std/src/collections/hash/map.rs:1478:7
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: unsatisfied requirement introduced here: `approvals::PendingApproval: std::fmt::Debug`
+[1m[96mhelp[0m: consider annotating `approvals::PendingApproval` with `#[derive(Debug)]`
+   [1m[94m|[0m
+[1m[94m14[0m [92m+ #[derive(Debug)][0m
+[1m[94m15[0m [1m[94m|[0m struct PendingApproval {
+   [1m[94m|[0m
+
+[1m[91merror[E0308][0m[1m: mismatched types[0m
+   [1m[94m--> [0msrc/providers.rs:514:21
+    [1m[94m|[0m
+[1m[94m514[0m [1m[94m|[0m                     supports_vision,
+    [1m[94m|[0m                     [1m[91m^^^^^^^^^^^^^^^[0m [1m[91mexpected `Option<bool>`, found `Option<Option<bool>>`[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: expected enum `Option<[1m[35mbool[0m>`
+               found enum `Option<[1m[35mstd::option::Option<bool>[0m>`
+[1m[96mhelp[0m: consider using `Option::expect` to unwrap the `std::option::Option<std::option::Option<bool>>` value, panicking if the value is an `Option::None`
+    [1m[94m|[0m
+[1m[94m514[0m [1m[94m| [0m                    supports_vision[92m: supports_vision.expect("REASON")[0m,
+    [1m[94m|[0m                                    [92m++++++++++++++++++++++++++++++++++[0m
+
+[1m[91merror[E0599][0m[1m: no method named `manage` found for mutable reference `&mut tauri::App` in the current scope[0m
+    [1m[94m--> [0msrc/lib.rs:39:17
+     [1m[94m|[0m
+[1m[94m  39[0m [1m[94m|[0m             app.manage(state);
+     [1m[94m|[0m                 [1m[91m^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: items from traits can only be used if the trait is in scope
+[1m[96mhelp[0m: there is a method `manager` with a similar name, but with different arguments
+    [1m[94m--> [0m/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.12.5/src/lib.rs:1088:5
+     [1m[94m|[0m
+[1m[94m1088[0m [1m[94m|[0m     fn manager(&self) -> &AppManager<R>;
+     [1m[94m|[0m     [1m[96m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[1m[96mhelp[0m: trait `Manager` which provides `manage` is implemented but not in scope; perhaps you want to import it
+     [1m[94m|[0m
+[1m[94m   1[0m [92m+ use tauri::Manager;[0m
+     [1m[94m|[0m
+
+[1mSome errors have detailed explanations: E0277, E0308, E0599.[0m
+[1mFor more information about an error, try `rustc --explain E0277`.[0m
+[1m[91merror[0m: could not compile `cinderdock` (lib test) due to 11 previous errors
+[1m[33mwarning[0m: build failed, waiting for other jobs to finish...
+[1m[91merror[0m: could not compile `cinderdock` (lib) due to 12 previous errors
