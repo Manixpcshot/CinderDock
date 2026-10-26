@@ -2,6 +2,11 @@ name: CI diagnostics
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - arena/89794682-cinderdock
+    paths:
+      - .github/workflows/diagnostics.yml
 
 permissions:
   contents: write
