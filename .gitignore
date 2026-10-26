@@ -44,3 +44,4 @@ smoke.err
 release-notes.md
 release-assets/
 *.log
+.ci-diagnostics/

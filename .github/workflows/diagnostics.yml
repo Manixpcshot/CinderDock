@@ -1,0 +1,60 @@
+name: CI diagnostics
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rust-diagnostics:
+    name: Capture Rust lockfile and diagnostics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: Install Linux Tauri dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Build frontend assets
+        run: npm run build
+      - name: Generate lockfile and diagnostics
+        working-directory: src-tauri
+        shell: bash
+        run: |
+          mkdir -p ../.ci-diagnostics
+          if [ ! -f Cargo.lock ]; then cargo generate-lockfile; fi
+          set +e
+          cargo clippy --all-targets --all-features -- -D warnings > ../.ci-diagnostics/clippy.log 2>&1
+          echo $? > ../.ci-diagnostics/clippy.exit
+          cargo test --all-targets --all-features > ../.ci-diagnostics/cargo-test.log 2>&1
+          echo $? > ../.ci-diagnostics/cargo-test.exit
+          set -e
+          tail -c 200000 ../.ci-diagnostics/clippy.log > ../.ci-diagnostics/clippy.tail.log || true
+          tail -c 200000 ../.ci-diagnostics/cargo-test.log > ../.ci-diagnostics/cargo-test.tail.log || true
+      - name: Commit diagnostics to this branch
+        shell: bash
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src-tauri/Cargo.lock .ci-diagnostics
+          if git diff --cached --quiet; then
+            echo 'No diagnostics changes.'
+          else
+            git commit -m 'chore: capture CI diagnostics'
+            git push origin "HEAD:$BRANCH"
+          fi
