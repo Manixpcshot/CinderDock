@@ -1,0 +1,48 @@
+# Node / Vite
+node_modules/
+dist/
+.vite/
+*.local
+npm-debug.log*
+
+# Rust / Tauri
+src-tauri/target/
+src-tauri/gen/
+*.pdb
+*.exe
+*.msi
+*.nsis
+*.zip
+
+# Local app data and secrets
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+credentials*
+secrets/
+.cinderdock/
+CinderDock.db
+CinderDock.db-*
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test output
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+smoke.json
+smoke.err
+release-notes.md
+release-assets/
+*.log
+
+.ci-diagnostics/
