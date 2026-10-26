@@ -1,0 +1,211 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Optional semantic version; defaults to package.json'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    name: Release checks
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - name: Determine release version
+        id: version
+        shell: bash
+        env:
+          INPUT_VERSION: ${{ github.event.inputs.version }}
+        run: |
+          version="$INPUT_VERSION"
+          if [ -z "$version" ]; then
+            version="$(node -p "require('./package.json').version")"
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Verify release version and semantic bump
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: node scripts/check-version.mjs release "$VERSION"
+      - name: ESLint
+        run: npm run lint
+      - name: TypeScript
+        run: npm run typecheck
+      - name: UI tests
+        run: npm test
+      - name: Frontend build
+        run: npm run build
+      - name: Install Linux Tauri dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+      - name: Rust formatting
+        working-directory: src-tauri
+        run: cargo fmt --check
+      - name: Clippy
+        working-directory: src-tauri
+        run: cargo clippy --locked --all-targets --all-features -- -D warnings
+      - name: Rust tests
+        working-directory: src-tauri
+        run: cargo test --locked --all-targets --all-features
+      - name: Release notes
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: node scripts/release-notes.mjs "$VERSION" release-notes.md
+      - name: Upload release notes
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: release-notes.md
+
+  publish:
+    name: Build, tag and publish
+    runs-on: windows-latest
+    needs: checks
+    env:
+      VERSION: ${{ needs.checks.outputs.version }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-notes
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify version again before build
+        run: node scripts/check-version.mjs consistent
+      - name: Build frontend
+        run: npm run build
+      - name: Build Windows portable and NSIS setup
+        run: npx tauri build --verbose
+      - name: Smoke test portable executable
+        shell: pwsh
+        run: |
+          $portable = Get-ChildItem -Path src-tauri/target -Recurse -Filter CinderDock.exe | Where-Object { $_.FullName -notlike '*\bundle\*' } | Select-Object -First 1
+          if (-not $portable) { throw 'Portable executable was not produced.' }
+          $stdout = Join-Path $env:RUNNER_TEMP 'cinderdock-smoke.json'
+          $stderr = Join-Path $env:RUNNER_TEMP 'cinderdock-smoke.err'
+          $process = Start-Process -FilePath $portable.FullName -ArgumentList '--cinderdock-smoke-test' -Wait -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr -WindowStyle Hidden
+          if ($process.ExitCode -ne 0) {
+            Get-Content $stderr -ErrorAction SilentlyContinue
+            throw "Smoke test failed with exit code $($process.ExitCode)."
+          }
+          $report = Get-Content $stdout -Raw -ErrorAction SilentlyContinue
+          if ($report -and $report -notmatch '"ok"\s*:\s*true') {
+            throw "Smoke report did not report success: $report"
+          }
+          $ui = Start-Process -FilePath $portable.FullName -PassThru -WindowStyle Hidden
+          Start-Sleep -Seconds 8
+          if ($ui.HasExited) {
+            throw "CinderDock window exited early with code $($ui.ExitCode)."
+          }
+          Stop-Process -Id $ui.Id -Force
+          Write-Host 'Windows portable executable smoke tests passed.'
+      - name: Assemble exactly four release assets
+        shell: pwsh
+        run: |
+          $tag = "v$env:VERSION"
+          $prefix = "CinderDock-v$env:VERSION"
+          $assets = Join-Path $env:RUNNER_TEMP 'cinderdock-release-assets'
+          if (Test-Path $assets) { Remove-Item $assets -Recurse -Force }
+          New-Item -ItemType Directory -Path $assets | Out-Null
+
+          $portableSource = Get-ChildItem -Path src-tauri/target -Recurse -Filter CinderDock.exe | Where-Object { $_.FullName -notlike '*\bundle\*' } | Select-Object -First 1
+          $setupSource = Get-ChildItem -Path src-tauri/target/release/bundle -Recurse -Filter *setup*.exe | Select-Object -First 1
+          if (-not $portableSource) { throw 'Portable executable missing.' }
+          if (-not $setupSource) { throw 'NSIS setup executable missing.' }
+
+          $portableName = "$prefix-windows-x64-portable.exe"
+          $setupName = "$prefix-windows-x64-setup.exe"
+          $sourceName = "$prefix-source.zip"
+          $sumName = 'SHA256SUMS.txt'
+
+          Copy-Item $portableSource.FullName (Join-Path $assets $portableName)
+          Copy-Item $setupSource.FullName (Join-Path $assets $setupName)
+
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          $head = (git rev-parse HEAD).Trim()
+          $existingTag = (git rev-parse -q --verify "refs/tags/$tag" 2>$null)
+          if ($existingTag) {
+            if ($existingTag.Trim() -ne $head) { throw "Tag $tag exists on another commit." }
+            Write-Host "Tag $tag already points to HEAD."
+          } else {
+            git tag -a "$tag" -m "CinderDock $tag"
+            git push origin "$tag"
+          }
+
+          $existingRelease = gh release view "$tag" 2>$null
+          if ($LASTEXITCODE -eq 0) { throw "Release $tag already exists; refusing to overwrite assets." }
+
+          & git archive --format=zip --prefix="$prefix/" "$tag" -o (Join-Path $assets $sourceName)
+          if ($LASTEXITCODE -ne 0) { throw 'git archive failed.' }
+
+          $hashLines = @()
+          foreach ($name in @($portableName, $setupName, $sourceName)) {
+            $file = Join-Path $assets $name
+            if (-not (Test-Path $file)) { throw "Missing release asset: $name" }
+            $hash = (Get-FileHash -Path $file -Algorithm SHA256).Hash.ToLowerInvariant()
+            $hashLines += "$hash  $name"
+          }
+          Set-Content -Path (Join-Path $assets $sumName) -Value $hashLines -Encoding ascii
+
+          $files = Get-ChildItem -Path $assets -File
+          if ($files.Count -ne 4) { throw "Expected exactly 4 release assets, found $($files.Count)." }
+          foreach ($file in $files) {
+            if ($file.Length -eq 0) { throw "Empty release asset: $($file.Name)" }
+          }
+          Write-Host "Created assets: $($files.Name -join ', ')"
+          "ASSET_DIR=$assets" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - name: Create GitHub Release
+        shell: pwsh
+        run: |
+          $tag = "v$env:VERSION"
+          $assets = $env:ASSET_DIR
+          $portable = Join-Path $assets "CinderDock-v$env:VERSION-windows-x64-portable.exe"
+          $setup = Join-Path $assets "CinderDock-v$env:VERSION-windows-x64-setup.exe"
+          $source = Join-Path $assets "CinderDock-v$env:VERSION-source.zip"
+          $sums = Join-Path $assets 'SHA256SUMS.txt'
+          gh release create "$tag" "$portable" "$setup" "$source" "$sums" --verify-tag --title "CinderDock $tag" --notes-file release-notes.md
+          if ($LASTEXITCODE -ne 0) { throw 'GitHub Release creation failed.' }
+          gh release view "$tag" --json url,tagName,assets
