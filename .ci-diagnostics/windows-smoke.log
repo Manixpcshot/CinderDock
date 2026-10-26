@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "version": "0.1.0",
+  "configDir": "C:\\Users\\runneradmin\\AppData\\Roaming\\CinderDock",
+  "database": "C:\\Users\\runneradmin\\AppData\\Roaming\\CinderDock\\data\\cinderdock.sqlite3",
+  "migrationVersion": 1,
+  "secretBackend": "Windows DPAPI (per-user)",
+  "checks": [
+    "settings schema v1 loaded",
+    "SQLite migration v1 verified",
+    "HTTP client initialized",
+    "settings contains no API-key fields",
+    "secret backend configured"
+  ]
+}
