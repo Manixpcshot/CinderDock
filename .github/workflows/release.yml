@@ -65,8 +65,11 @@ jobs:
         run: npm run build
       - name: Install Linux Tauri dependencies
         run: |
-          timeout 300 sudo apt-get update -qq
-          timeout 300 sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+          for attempt in 1 2 3; do
+            if timeout 300 sudo apt-get update -qq; then break; fi
+            sleep 5
+          done
+          timeout 900 sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
       - name: Rust formatting
         working-directory: src-tauri
         run: cargo fmt --check
