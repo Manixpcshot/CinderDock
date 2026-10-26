@@ -6,6 +6,7 @@ use std::{
 
 #[cfg(target_os = "windows")]
 use base64::Engine;
+#[cfg(target_os = "windows")]
 use serde::{Deserialize, Serialize};
 #[cfg(target_os = "windows")]
 use std::fs;

@@ -120,6 +120,12 @@ impl ApprovalManager {
     }
 }
 
+impl Default for ApprovalManager {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -174,11 +180,5 @@ mod tests {
             .respond(&request.id, ApprovalDecision::Deny)
             .unwrap();
         assert_eq!(receiver.await.unwrap(), ApprovalDecision::Deny);
-    }
-}
-
-impl Default for ApprovalManager {
-    fn default() -> Self {
-        Self::new()
     }
 }

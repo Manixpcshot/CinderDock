@@ -66,7 +66,6 @@ impl StreamParser {
         }
         if trimmed.is_empty() {
             let update = self.flush_data()?;
-            self.content.push_str(&update.delta);
             self.finished |= update.done;
             return Ok(update);
         }
@@ -192,7 +191,6 @@ impl StreamParser {
     pub fn finish(&mut self) -> AppResult<StreamOutcome> {
         if !self.data_buffer.is_empty() {
             let update = self.flush_data()?;
-            self.content.push_str(&update.delta);
             self.finished |= update.done;
         }
         let mut tool_calls = Vec::new();
