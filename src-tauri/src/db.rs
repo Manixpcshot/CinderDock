@@ -3,11 +3,13 @@ use std::{collections::BTreeMap, path::Path, time::Duration};
 use rusqlite::{params, Connection, OptionalExtension};
 use serde_json::Value;
 
+#[cfg(test)]
+use crate::models::AttachmentView;
 use crate::{
     error::{AppError, AppResult},
     models::{
-        ApprovalDecision, AttachmentView, ConversationData, ConversationSummary, FileChangeView,
-        MessageView, ToolCallView, ToolEventView,
+        ApprovalDecision, ConversationData, ConversationSummary, FileChangeView, MessageView,
+        ToolCallView, ToolEventView,
     },
     security::{now_rfc3339, truncate_chars},
 };

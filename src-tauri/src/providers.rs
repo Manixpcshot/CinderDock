@@ -490,7 +490,7 @@ pub fn parse_models_payload(kind: ProviderKind, value: &Value) -> AppResult<Vec<
                     .unwrap_or(id)
                     .to_string();
                 let modalities = item.pointer("/architecture/input_modalities");
-                let supports_vision = modalities.map(|m| {
+                let supports_vision = modalities.and_then(|m| {
                     m.as_array()
                         .map(|values| values.iter().any(|v| v.as_str() == Some("image")))
                 });

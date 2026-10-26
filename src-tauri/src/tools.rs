@@ -1101,7 +1101,7 @@ Write-Output "scrolled"
             created_at: now_rfc3339(),
         };
         let start = self.ctx.state.approvals.begin(request)?;
-        let (request, receiver, from_session) = match start {
+        let (request, receiver) = match start {
             ApprovalStart::Granted {
                 request,
                 from_session,

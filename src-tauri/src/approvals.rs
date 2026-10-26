@@ -11,6 +11,7 @@ use crate::{
     security::new_id,
 };
 
+#[derive(Debug)]
 struct PendingApproval {
     conversation_id: String,
     session_key: String,

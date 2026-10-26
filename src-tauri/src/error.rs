@@ -13,6 +13,10 @@ pub enum AppError {
     Http(#[from] reqwest::Error),
     #[error("URL error: {0}")]
     Url(#[from] url::ParseError),
+    #[error("Regex error: {0}")]
+    Regex(#[from] regex::Error),
+    #[error("Background task error: {0}")]
+    Task(#[from] tokio::task::JoinError),
     #[error("{0}")]
     Validation(String),
     #[error("{0}")]

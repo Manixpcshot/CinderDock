@@ -557,11 +557,10 @@ pub async fn revert_file_change(
         } else if resolved.exists() {
             std::fs::remove_file(&resolved)?;
         }
-        db::set_file_change_status(
-            &state.db.lock().await,
-            &change_id,
-            "reverted",
-        )?;
+        {
+            let conn = state.db.lock().await;
+            db::set_file_change_status(&conn, &change_id, "reverted")?;
+        }
         let mut updated = change;
         updated.status = "reverted".into();
         let bus = state.event_bus(app);

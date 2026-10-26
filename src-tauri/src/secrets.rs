@@ -1,12 +1,14 @@
 use std::{
     collections::HashMap,
-    fs,
     path::PathBuf,
     sync::{Arc, Mutex},
 };
 
+#[cfg(target_os = "windows")]
 use base64::Engine;
 use serde::{Deserialize, Serialize};
+#[cfg(target_os = "windows")]
+use std::fs;
 
 use crate::error::{AppError, AppResult};
 

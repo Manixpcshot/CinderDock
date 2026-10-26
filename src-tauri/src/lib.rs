@@ -16,6 +16,8 @@ pub mod tools;
 
 use std::fs;
 
+use tauri::Manager;
+
 use tracing_subscriber::EnvFilter;
 
 use crate::{

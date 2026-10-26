@@ -5,8 +5,9 @@ on:
   push:
     branches:
       - arena/89794682-cinderdock
-    paths:
-      - .github/workflows/diagnostics.yml
+    paths-ignore:
+      - .ci-diagnostics/**
+      - src-tauri/Cargo.lock
 
 permissions:
   contents: write
