@@ -1,4 +1,4 @@
-name: CI diagnostics
+name: Windows build diagnostics
 
 on:
   workflow_dispatch:
@@ -13,13 +13,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: diagnostics-${{ github.ref }}
+  group: windows-diagnostics-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  rust-diagnostics:
-    name: Capture Rust lockfile and diagnostics
-    runs-on: ubuntu-24.04
+  windows-diagnostics:
+    name: Capture Windows build and smoke logs
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,32 +31,50 @@ jobs:
           cache: npm
       - uses: dtolnay/rust-toolchain@stable
         with:
-          components: rustfmt, clippy
-      - name: Install Linux Tauri dependencies
-        run: |
-          for attempt in 1 2 3; do
-            if timeout 300 sudo apt-get update -qq; then break; fi
-            sleep 5
-          done
-          timeout 900 sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
-      - name: Install frontend dependencies
+          targets: x86_64-pc-windows-msvc
+      - name: Install dependencies
         run: npm ci
-      - name: Build frontend assets
+      - name: Build frontend
         run: npm run build
-      - name: Generate lockfile and diagnostics
-        working-directory: src-tauri
-        shell: bash
+      - name: Build Tauri and capture log
+        shell: pwsh
         run: |
-          mkdir -p ../.ci-diagnostics
-          if [ ! -f Cargo.lock ]; then cargo generate-lockfile; fi
-          set +e
-          cargo clippy --all-targets --all-features -- -D warnings > ../.ci-diagnostics/clippy.log 2>&1
-          echo $? > ../.ci-diagnostics/clippy.exit
-          cargo test --all-targets --all-features > ../.ci-diagnostics/cargo-test.log 2>&1
-          echo $? > ../.ci-diagnostics/cargo-test.exit
-          set -e
-          tail -c 200000 ../.ci-diagnostics/clippy.log > ../.ci-diagnostics/clippy.tail.log || true
-          tail -c 200000 ../.ci-diagnostics/cargo-test.log > ../.ci-diagnostics/cargo-test.tail.log || true
+          New-Item -ItemType Directory -Force -Path .ci-diagnostics | Out-Null
+          $log = '.ci-diagnostics/windows-build.log'
+          npx tauri build --verbose *> $log
+          $code = $LASTEXITCODE
+          Set-Content -Path .ci-diagnostics/windows-build.exit -Value "$code" -Encoding ascii
+          if ($code -ne 0) {
+            Write-Host "Tauri build failed with exit code $code"
+            Get-Content $log -Tail 100
+          }
+      - name: Smoke test portable executable
+        shell: pwsh
+        run: |
+          $code = Get-Content .ci-diagnostics/windows-build.exit -Raw
+          if ($code.Trim() -ne '0') {
+            Set-Content -Path .ci-diagnostics/windows-smoke.log -Value 'Skipped: build failed.' -Encoding utf8
+            Set-Content -Path .ci-diagnostics/windows-smoke.err -Value '' -Encoding utf8
+            Set-Content -Path .ci-diagnostics/windows-smoke.exit -Value 'skipped' -Encoding ascii
+            return
+          }
+          $portable = Get-ChildItem -Path src-tauri/target -Recurse -Filter CinderDock.exe | Where-Object { $_.FullName -notlike '*\bundle\*' } | Select-Object -First 1
+          if (-not $portable) {
+            Set-Content -Path .ci-diagnostics/windows-smoke.log -Value 'Portable executable missing.' -Encoding utf8
+            Set-Content -Path .ci-diagnostics/windows-smoke.exit -Value 'missing' -Encoding ascii
+            return
+          }
+          $stdout = '.ci-diagnostics/windows-smoke.log'
+          $stderr = '.ci-diagnostics/windows-smoke.err'
+          $process = Start-Process -FilePath $portable.FullName -ArgumentList '--cinderdock-smoke-test' -Wait -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr -WindowStyle Hidden
+          Set-Content -Path .ci-diagnostics/windows-smoke.exit -Value "$($process.ExitCode)" -Encoding ascii
+          $ui = Start-Process -FilePath $portable.FullName -PassThru -WindowStyle Hidden
+          Start-Sleep -Seconds 8
+          if ($ui.HasExited) {
+            Add-Content -Path .ci-diagnostics/windows-smoke.err -Value "Window exited early with code $($ui.ExitCode)"
+          } else {
+            Stop-Process -Id $ui.Id -Force
+          }
       - name: Commit diagnostics to this branch
         shell: bash
         env:
@@ -64,10 +82,11 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -f src-tauri/Cargo.lock .ci-diagnostics
+          git pull --rebase origin "$BRANCH"
+          git add -f .ci-diagnostics
           if git diff --cached --quiet; then
             echo 'No diagnostics changes.'
           else
-            git commit -m 'chore: capture CI diagnostics'
+            git commit -m 'chore: capture Windows build diagnostics'
             git push origin "HEAD:$BRANCH"
           fi

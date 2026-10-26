@@ -69,7 +69,15 @@ jobs:
             if timeout 300 sudo apt-get update -qq; then break; fi
             sleep 5
           done
-          timeout 900 sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+          installed=0
+          for attempt in 1 2 3; do
+            if timeout 900 sudo apt-get install -y --no-install-recommends libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf; then
+              installed=1
+              break
+            fi
+            sleep 10
+          done
+          if [ "$installed" -ne 1 ]; then exit 1; fi
       - name: Rust formatting
         working-directory: src-tauri
         run: cargo fmt --check
